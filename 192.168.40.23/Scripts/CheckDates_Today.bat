@@ -73,7 +73,7 @@ IF NOT %filedatetime:~0, 10% == %TodayDate% goto BadDate
 echo SUCCESS!!!
 d:
 cd\Install\Scripts\Cmail_Success
-cmail1
+cmail
 
 
 
@@ -81,16 +81,15 @@ cmail1
 echo Bad Date Compare!
 d:
 cd\Install\Scripts\Cmail_BadDate
-cmail1
+cmail
 goto END
 
 :FileMissing
 echo Files are Missing!
 d:
 cd\Install\Scripts\Cmail_FAILED
-cmail1
+cmail
 goto END
 
 :END
 cd\install\scripts
-pause

@@ -21,18 +21,16 @@ GOTO :END
 
 d:
 cd\
-rd veeam /s /q
+rd veeam /q /s
 md Veeam
 
 :DAILY
 
-REM c:
-REM cd\
-REM cd Acronis
-REM rd 03 /s /q
-REM rd 02 /s /q
-REM cd 01
-REM del *.tib /q
+d:
+cd\
+cd Acronis
+cd 01
+del *.tib /q
 
 GOTO :END 
 
