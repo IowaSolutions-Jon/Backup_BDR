@@ -19,6 +19,7 @@ SET filename4="D:\Acronis\01\AZDB.tib"
 SET filename5="D:\Acronis\01\NewTransServer.tib"
 
 SET esxfile1="D:\Veeam\40.15\40.15.vbm"
+SET esxfile2="C:\Veeam\ChathamOaks_OFFSITE.vbm"
 
 SET AZProduction="D:\AZ-SQL_BK\analive.bak"
 
@@ -39,6 +40,7 @@ IF Not Exist %filename4% GOTO FileMissing
 IF Not Exist %filename5% GOTO FileMissing
 
 IF Not Exist %esxfile1% GOTO FileMissing
+IF Not Exist %esxfile2% GOTO FileMissing
 
 IF Not Exist %AZProduction% GOTO FileMissing
 

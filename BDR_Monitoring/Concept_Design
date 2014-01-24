@@ -1,0 +1,25 @@
+## Jonathon Cronin with Iowa Solutions
+
+Concept is to automate the ABBE Backup Monitoring.
+
+Target language : Powershell
+
+Environments are all windows Server computers - with the primary servers being those
+that are windows 2008 and above
+
+
+1. Have a central location (FTP if possible) that is updated from GITHUB Versions of the 
+files that are being controlled through a central account.
+
+2. That these files will deploy out to the servers throughout the system to allow for 
+those files to be controlled centrally.
+
+3. That these will be an email report compiled from these reports that is sent to me 
+to check on the server status information across all of the backup information.
+
+
+Time : 4 - 5 Hours Total ---> Will save 12 - 40 hours time in house without affecting
+billable hours that we are able to make money from. 
+
+Scalable meaning that we can in the future expand on ABBE situation with better monitoring
+thereby decreasing the chance for a failure to occur in the system.
