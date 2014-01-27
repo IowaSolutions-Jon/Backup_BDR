@@ -1,0 +1,61 @@
+Abbe Backup Billing - Backup Systems Verification for {month} 2014
+
+Abbe – Aging Services = 1.0hr month
+Abbe – MHC = 2.5hr month
+Abbe – AI = 2.0hr month
+Abbe – CommCare = 0.5hr month
+
+Abbe Backup Tasks
+
+1) RDP to SRVR2 at Abbe AI 
+192.168.10.221
+-D:\CorpData\ASI\Users... look in tabletdata folders for recent activity
+
+2) RDP to File at Abbe AI
+192.168.10.6
+-D:\Snap\humanservices\CM\ - looking at FTP robocopy recent activity
+-D:\snap\everythingelse - Looking at transcripts recent activity
+
+3) RDP to BackupAI at Abbe AI
+192.168.10.1
+-Arcserve Check
+-Veeam Check
+
+4) RDP to SQL1 at Abbe AI
+192.168.10.22
+-Verify SQL Backup E:\1 (check dates)
+
+4) RDP to BackupMHC at Abbe MHC
+192.168.40.23
+-Veeam check
+-Arcserve Check
+
+5) RDP to AZDB at Abbe MHC (.41)
+192.168.40.41
+-verify SQL_BK* on D drive
+-Verify acronis
+
+6) RDP to Host 03 at Abbe MHC  (.40)
+192.168.40.40
+-Verify acronis
+
+7) RDP to Host 01 at Abbe MHC  (.42)
+192.168.40.42
+-Verify acronis
+
+8) RDP to Host 02 at Abbe MHC  .(43)
+192.168.40.43
+-Verify acronis
+
+9) RDP to transserver at Abbe MHC  (.3)
+192.168.40.3
+-Verify acronis
+
+10) RDP to abbecc1 at Abbe Community Care on friday
+192.168.10.13
+-Verify acronis
+-Verify USB drives for acronis
+
+11) RDP to server-HumerServers at Abbe Aging Services (Connect from ABBE AI)
+192.168.30.2
+-Verify acronis
