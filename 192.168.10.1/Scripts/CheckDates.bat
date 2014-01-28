@@ -66,10 +66,10 @@ GOTO Esxfile3-Ok
 
 REM Check if Tape Backup Ran OK
 
-FOR %%f IN (%TapeBackup%) DO SET filedatetime=%%~tf
-IF %filedatetime:~0, 10% == %TodayDate% goto TapeBackup-OK
-IF %filedatetime:~0, 10% == %esterdayDate% goto TapeBackup-OK
-goto BadDate
+REM FOR %%f IN (%TapeBackup%) DO SET filedatetime=%%~tf
+REM IF %filedatetime:~0, 10% == %TodayDate% goto TapeBackup-OK
+REM IF %filedatetime:~0, 10% == %esterdayDate% goto TapeBackup-OK
+REM goto BadDate
 
 :TapeBackup-OK
 
