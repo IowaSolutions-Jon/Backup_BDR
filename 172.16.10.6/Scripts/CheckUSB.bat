@@ -47,26 +47,26 @@ goto BadDate_2
 
 :ESX3
 FOR %%f IN (%esxfile3%) DO SET filedatetime=%%~tf
-IF %filedatetime:~0, 10% == %var1% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var2% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var3% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var4% goto Esxfile-OK
+IF %filedatetime:~0, 10% == %var1% goto Esxfile3-OK
+IF %filedatetime:~0, 10% == %var2% goto Esxfile3-OK
+IF %filedatetime:~0, 10% == %var3% goto Esxfile3-OK
+IF %filedatetime:~0, 10% == %var4% goto Esxfile3-OK
 goto BadDate_3
 
 :ESX4
 FOR %%f IN (%esxfile4%) DO SET filedatetime=%%~tf
-IF %filedatetime:~0, 10% == %var1% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var2% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var3% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var4% goto Esxfile-OK
+IF %filedatetime:~0, 10% == %var1% goto Esxfile4-OK
+IF %filedatetime:~0, 10% == %var2% goto Esxfile4-OK
+IF %filedatetime:~0, 10% == %var3% goto Esxfile4-OK
+IF %filedatetime:~0, 10% == %var4% goto Esxfile4-OK
 goto BadDate_4
 
 :ESX5
 FOR %%f IN (%esxfile5%) DO SET filedatetime=%%~tf
-IF %filedatetime:~0, 10% == %var1% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var2% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var3% goto Esxfile-OK
-IF %filedatetime:~0, 10% == %var4% goto Esxfile-OK
+IF %filedatetime:~0, 10% == %var1% goto Esxfile5-OK
+IF %filedatetime:~0, 10% == %var2% goto Esxfile5-OK
+IF %filedatetime:~0, 10% == %var3% goto Esxfile5-OK
+IF %filedatetime:~0, 10% == %var4% goto Esxfile5-OK
 goto BadDate_5
 
 
