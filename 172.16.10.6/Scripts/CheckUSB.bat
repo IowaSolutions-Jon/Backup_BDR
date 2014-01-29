@@ -4,21 +4,21 @@ setlocal ENABLEDELAYEDEXPANSION
 DEL C:\Scripts\datemap.txt
 DEL C:\Scripts\report.txt
 REM Access the network drive
-net use \\10.20.12.5 /user:cyber2002 yyeXjAML@2012
+net use \\172.16.10.10 /user:cyber2002 yyeXjAML@2012
 
 
 REM Set the files for validation
-SET esxfile1="\\10.20.12.5\usb1-2share1\Veeam\12.09\12.09.vbm"
-SET esxfile2="\\10.20.12.5\usb1-2share1\Veeam\10.62\10.62.vbm"
-SET esxfile3="\\10.20.12.5\usb1-2share1\Veeam\12.11\12.11.vbm"
-SET esxfile4="\\10.20.12.5\usb1-2share1\Veeam\12.12\12.12.vbm"
-SET esxfile5="\\10.20.12.5\usb1-2share1\Veeam\12.13\12.13.vbm"
+SET esxfile1="\\172.16.10.10\usb1-2share1\Veeam\10.61\10.61.vbm"
+SET esxfile2="\\172.16.10.10\usb1-2share1\Veeam\10.62\10.62.vbm"
+SET esxfile3="\\172.16.10.10\usb1-2share1\Veeam\10.63\10.63.vbm"
+SET esxfile4="\\172.16.10.10\usb1-2share1\Veeam\10.64\10.64.vbm"
+SET esxfile5="\\172.16.10.10\usb1-2share1\Veeam\10.65\10.65.vbm"
 
 REM Get last 4 days dates for reference
-@call C:\Scripts\GetDateTarget.bat 4
-@call C:\Scripts\GetDateTarget.bat 3
-@call C:\Scripts\GetDateTarget.bat 2
-@call C:\Scripts\GetDateTarget.bat 1
+@call GetDateTarget.bat 4
+@call GetDateTarget.bat 3
+@call GetDateTarget.bat 2
+@call GetDateTarget.bat 1
 
 REM Read the contents of the date map into the current running script
 set vidx=0
@@ -119,24 +119,12 @@ GOTO ENDGAME
 if %bad%==1 (GOTO BADEND) else (GOTO GOODEND)
 
 :BADEND
-ECHO SUBJECT^=IAS 10.20.12.5 FAILED >> Cmail_FAILED\cmail.ini
-ECHO MESSAGE^=10.20.12.5 Backup FAILED Results Files are showing old dates. One of the backup systems did not run as expected^.^;^/n^/n >> Cmail_FAILED\cmail.ini
-ECHO DELETEAFTERSEND^=0 >> Cmail_FAILED\cmail.ini
-ECHO.  >> Cmail_FAILED\cmail.ini
-ECHO.  >> Cmail_FAILED\cmail.ini
-ECHO ^;ATTACHMENTS^=../report.txt >> Cmail_FAILED\cmail.ini
 CD Cmail_FAILED
 cmail
 EXIT
 
 :GOODEND
-ECHO SUBJECT^=IAS 10.20.12.5 Success >> Cmail_Success\cmail.ini
-ECHO MESSAGE^=10.20.12.5 Backup Success Results Files are showing old dates. One of the backup systems did not run as expected^.^;^/n^/n >> Cmail_Success\cmail.ini
-ECHO DELETEAFTERSEND^=0 >> Cmail_Success\cmail.ini
-ECHO.  >> Cmail_Success\cmail.ini
-ECHO.  >> Cmail_Success\cmail.ini
-ECHO ^;ATTACHMENTS^=../report.txt >> Cmail_Success\cmail.ini
 CD Cmail_Success
-cmail
+cmail.exe
 EXIT
 
