@@ -1,8 +1,8 @@
 @ECHO OFF
 CD C:\Scripts
 setlocal ENABLEDELAYEDEXPANSION
-REM DEL C:\Scripts\datemap.txt
-REM DEL C:\Scripts\report.txt
+DEL C:\Scripts\datemap.txt
+DEL C:\Scripts\report.txt
 REM Access the network drive
 net use \\10.20.12.5 /user:cyber2002 yyeXjAML@2012
 

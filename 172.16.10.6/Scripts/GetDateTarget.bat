@@ -93,5 +93,6 @@ goto CHKDAY
 if /I %mm% LSS 10 set mm=0%mm%
 if /I %dd% LSS 10 set dd=0%dd%
 
-echo Date %dayCnt% day(s) before %CurDate% is %mm%/%dd%/%yyyy%
+REM echo Date %dayCnt% day(s) before %CurDate% is %mm%/%dd%/%yyyy%
 set tdate=%mm%/%dd%/%yyyy%
+echo %tdate% >> datemap.txt
